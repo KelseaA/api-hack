@@ -1,0 +1,81 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+*:focus {
+    outline: none;
+}
+body{
+	font-size: 16px;
+	margin: 0 auto;
+}
+
+/*splash view only styling*/
+.header-open{
+	background-image: url("../images/banner.jpg");
+	background-repeat: no-repeat;
+ 	background-size: cover;
+	height: 30rem;
+	margin-bottom: 3rem;
+/*	display: none;*/
+}
+h1, h2{
+	text-align: center;
+}
+.header-open h1{
+	padding-top: 8rem;
+	font-size: 6rem;
+	margin-bottom: 2rem;
+}
+.header-open h2{
+	font-size: 2rem;
+}
+/*.form-open{
+	display: none;
+}*/
+
+/*shared splah/search styling - input forms*/
+form{
+	text-align: center;
+}
+input{
+	margin-top: 1.5rem;
+	height: 1.5rem;
+	font-size: 1rem;
+	border-radius: 1rem;
+}
+.search-bar{
+	width: 28rem;
+	margin-right: 2rem;
+}
+.search-bar[placeholder], .search-bar[value]{
+	padding-left: .75rem;
+}
+.submit-button{
+	padding: 0 1rem;
+	border: none;
+	background-color: #EF6F13;
+}
+.submit-button:hover{
+	background-color: #E71520;
+}
+
+/*search view only styling*/
+.header-search{
+	display: visible;
+	height: 4.5rem;
+	background-color: lightgrey;
+	display: none;
+}
+.logo{
+	text-align: left;
+	height: 40px;
+	margin-top: 1rem;
+	margin-left: 1rem;
+	display: inline-block;
+	float: left;
+}
+.form-search{
+	margin-right: 12rem;
+}
