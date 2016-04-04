@@ -18,15 +18,14 @@ body{
  	background-size: cover;
 	height: 30rem;
 	margin-bottom: 3rem;
+	text-align: center;
 /*	display: none;*/
 }
-h1, h2{
-	text-align: center;
-}
-.header-open h1{
-	padding-top: 8rem;
+.header-open img{
+	height: 13rem;
+	padding-top: 9rem;
 	font-size: 6rem;
-	margin-bottom: 2rem;
+	margin-bottom: 3rem;
 }
 .header-open h2{
 	font-size: 2rem;
@@ -47,7 +46,7 @@ input{
 }
 .search-bar{
 	width: 28rem;
-	margin-right: 2rem;
+	margin-right: 1rem;
 }
 .search-bar[placeholder], .search-bar[value]{
 	padding-left: .75rem;
@@ -55,10 +54,12 @@ input{
 .submit-button{
 	padding: 0 1rem;
 	border: none;
-	background-color: #EF6F13;
+	background-color: #1573e5;
+	color: #fff;
+	font-weight: bold;
 }
 .submit-button:hover{
-	background-color: #E71520;
+	background-color: #E5872F;
 }
 
 /*search view only styling*/
