@@ -50,13 +50,29 @@ function getVenueEvents(data){
 function showEvents(data){
 	for(var i = 0; i < data.events.length; i++){
 		// console.log(data.events[i]);
-		var date = data.events[i].datetime_local;
-		$(".results-wrapper").append('<div class="results-listing"><div class="results-date-time"><p>' + date + '</p></div><div class="results-event-location"><p class="top-p">' + data.events[i].title + '</p><p>' + data.events[i].venue.name + '</p></div></div>');
-		// var performer = "";
-		// for(var x = 0; x < data.events[i].performers.length; x++){
-		// 	// console.log(data.events[i].performers[x]);
-		// 	performer = performer + " " + data.events[i].performers[x].name;
-		// 	// $(".results-event-location").append('<p class="top-p">' + performer + '</p>');
+		var d = new Date(data.events[i].datetime_local);
+		var locale = "en-us";
+    	var month = d.toLocaleString(locale, { month: "long" });
+    	var hours = d.getHours();
+    	var minutes = d.getMinutes();
+    	var ampm = "am";
+    	if (hours > 12){
+    		hours -= 12;
+    		var ampm = "pm";
+    	}
+    	if(minutes < 10){
+    		minutes = "0" + minutes;
+    	}
+		$(".results-wrapper").append('<div class="results-listing"><div class="results-date-time"><p class="top-p">' + month + " " + d.getDate() +'</p><p>' + hours + ":" + minutes + ampm + '</p></div><div class="results-event-location"><p class="top-p">' + data.events[i].title + '</p><p>' + data.events[i].venue.name + '</p></div></div>');
+
+
+		// date template";
+		// var d = new Date();
+		// var	locale = "en-us";
+		// var month = d.toLocaleString(locale, { month: "long" });
+		// var date = d.toLocaleString(locale, {date: "long"});
+
+		//date += month + " " + date;
 	}
 }
 function showResultsPage(){
